@@ -1,0 +1,5 @@
+
+import Lettuce_pb2 as pb2
+import Lettuce_BattleServer_Schema_pb2_grpc as BattleServer
+import Takasho_Schema_LettuceDebugServer_Debug_pb2_grpc as DebugApi
+import Takasho_Schema_LettuceServer_PlayerApi_pb2_grpc as PlayerApi

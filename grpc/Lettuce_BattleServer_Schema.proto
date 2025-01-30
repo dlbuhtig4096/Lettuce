@@ -1,0 +1,13 @@
+
+/*
+ * Project:     Lettuce
+ * Author:      dlbuhtig4096@github
+ * Version:     2025-01-31
+ */
+                       
+syntax = "proto3";
+import "Lettuce.proto";
+
+service Battle {
+    rpc Connect(stream Lettuce.BattleServer.Schema.ClientMessage) returns (stream Lettuce.BattleServer.Schema.ServerMessage);
+}

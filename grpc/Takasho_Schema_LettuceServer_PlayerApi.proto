@@ -1,0 +1,226 @@
+
+/*
+ * Project:     Lettuce
+ * Author:      dlbuhtig4096@github
+ * Version:     2025-01-31
+ */
+                       
+syntax = "proto3";
+import "Lettuce.proto";
+
+service Album {
+    rpc ListV1(Takasho.Schema.LettuceServer.PlayerApi.AlbumListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AlbumListV1.Response);
+    rpc ChangeOrderV1(Takasho.Schema.LettuceServer.PlayerApi.AlbumChangeOrderV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AlbumChangeOrderV1.Response);
+    rpc GetDetailV1(Takasho.Schema.LettuceServer.PlayerApi.AlbumGetDetailV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AlbumGetDetailV1.Response);
+    rpc GetOtherDetailV1(Takasho.Schema.LettuceServer.PlayerApi.AlbumGetOtherDetailV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AlbumGetOtherDetailV1.Response);
+    rpc SetV1(Takasho.Schema.LettuceServer.PlayerApi.AlbumSetV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AlbumSetV1.Response);
+    rpc DeleteV1(Takasho.Schema.LettuceServer.PlayerApi.AlbumDeleteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AlbumDeleteV1.Response);
+}
+service Collection {
+    rpc GetSomeonesV1(Takasho.Schema.LettuceServer.PlayerApi.CollectionGetSomeonesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CollectionGetSomeonesV1.Response);
+    rpc ListV1(Takasho.Schema.LettuceServer.PlayerApi.CollectionListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CollectionListV1.Response);
+    rpc OtherListV1(Takasho.Schema.LettuceServer.PlayerApi.CollectionOtherListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CollectionOtherListV1.Response);
+    rpc SetMyBestV1(Takasho.Schema.LettuceServer.PlayerApi.CollectionSetMyBestV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CollectionSetMyBestV1.Response);
+    rpc LikeV1(Takasho.Schema.LettuceServer.PlayerApi.CollectionLikeV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CollectionLikeV1.Response);
+}
+service AnalyticsLog {
+    rpc SendAnalyticsLogV1(Takasho.Schema.LettuceServer.PlayerApi.AnalyticsLogSendV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AnalyticsLogSendV1.Response);
+}
+service AndroidPlayIntegrity {
+    rpc StartV1(Takasho.Schema.LettuceServer.PlayerApi.AndroidPlayIntegrityStartV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AndroidPlayIntegrityStartV1.Response);
+    rpc VerifyV1(Takasho.Schema.LettuceServer.PlayerApi.AndroidPlayIntegrityVerifyV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.AndroidPlayIntegrityVerifyV1.Response);
+}
+service Card {
+    rpc ListV1(Takasho.Schema.LettuceServer.PlayerApi.CardListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardListV1.Response);
+    rpc IsUsedV1(Takasho.Schema.LettuceServer.PlayerApi.CardIsUsedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardIsUsedV1.Response);
+}
+service CardSkin {
+    rpc ListV1(Takasho.Schema.LettuceServer.PlayerApi.CardSkinListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardSkinListV1.Response);
+    rpc ExchangeV1(Takasho.Schema.LettuceServer.PlayerApi.CardSkinExchangeV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardSkinExchangeV1.Response);
+    rpc GetExchangedCatalogsV1(Takasho.Schema.LettuceServer.PlayerApi.CardSkinGetExchangedCatalogsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardSkinGetExchangedCatalogsV1.Response);
+    rpc GetCardExchangeRouteV1(Takasho.Schema.LettuceServer.PlayerApi.CardSkinGetCardExchangeRouteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardSkinGetCardExchangeRouteV1.Response);
+    rpc ExchangedCatalogListV1(Takasho.Schema.LettuceServer.PlayerApi.CardSkinExchangedCatalogListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardSkinExchangedCatalogListV1.Response);
+    rpc IsUsedV1(Takasho.Schema.LettuceServer.PlayerApi.CardSkinIsUsedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.CardSkinIsUsedV1.Response);
+}
+service Deck {
+    rpc GetListV1(Takasho.Schema.LettuceServer.PlayerApi.DeckGetListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.DeckGetListV1.Response);
+    rpc SaveV1(Takasho.Schema.LettuceServer.PlayerApi.DeckSaveV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.DeckSaveV1.Response);
+    rpc DeleteV1(Takasho.Schema.LettuceServer.PlayerApi.DeckDeleteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.DeckDeleteV1.Response);
+    rpc GetRentalDecksV1(Takasho.Schema.LettuceServer.PlayerApi.DeckGetRentalDecksV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.DeckGetRentalDecksV1.Response);
+}
+service Echo {
+    rpc EchoV1(Takasho.Schema.LettuceServer.PlayerApi.EchoEchoV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.EchoEchoV1.Response);
+}
+service Fave {
+    rpc InsightV1(Takasho.Schema.LettuceServer.PlayerApi.FaveInsightV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FaveInsightV1.Response);
+}
+service Feed {
+    rpc GetTimelineV1(Takasho.Schema.LettuceServer.PlayerApi.FeedGetTimelineV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FeedGetTimelineV1.Response);
+    rpc RenewTimelineV1(Takasho.Schema.LettuceServer.PlayerApi.FeedRenewTimelineV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FeedRenewTimelineV1.Response);
+    rpc ChallengeV1(Takasho.Schema.LettuceServer.PlayerApi.FeedChallengeV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FeedChallengeV1.Response);
+    rpc HealChallengePowerV1(Takasho.Schema.LettuceServer.PlayerApi.FeedHealChallengePowerV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FeedHealChallengePowerV1.Response);
+    rpc ShareV1(Takasho.Schema.LettuceServer.PlayerApi.FeedShareV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FeedShareV1.Response);
+}
+service Friend {
+    rpc ListV1(Takasho.Schema.LettuceServer.PlayerApi.FriendListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FriendListV1.Response);
+    rpc SendRequestsV1(Takasho.Schema.LettuceServer.PlayerApi.FriendSendRequestsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FriendSendRequestsV1.Response);
+    rpc CancelSentRequestsV1(Takasho.Schema.LettuceServer.PlayerApi.FriendCancelSentRequestsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FriendCancelSentRequestsV1.Response);
+    rpc ApproveRequestV1(Takasho.Schema.LettuceServer.PlayerApi.FriendApproveRequestV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FriendApproveRequestV1.Response);
+    rpc RejectRequestsV1(Takasho.Schema.LettuceServer.PlayerApi.FriendRejectRequestsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FriendRejectRequestsV1.Response);
+    rpc DeleteV1(Takasho.Schema.LettuceServer.PlayerApi.FriendDeleteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FriendDeleteV1.Response);
+    rpc SearchV1(Takasho.Schema.LettuceServer.PlayerApi.FriendSearchV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.FriendSearchV1.Response);
+}
+service ItemShop {
+    rpc GetPurchaseSummariesV1(Takasho.Schema.LettuceServer.PlayerApi.ItemShopGetPurchaseSummariesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ItemShopGetPurchaseSummariesV1.Response);
+    rpc PurchaseV1(Takasho.Schema.LettuceServer.PlayerApi.ItemShopPurchaseV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ItemShopPurchaseV1.Response);
+    rpc ExchangeV1(Takasho.Schema.LettuceServer.PlayerApi.ItemShopExchangeV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ItemShopExchangeV1.Response);
+}
+service Action {
+    rpc SyncStatesV1(Takasho.Schema.LettuceServer.PlayerApi.ActionSyncStatesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ActionSyncStatesV1.Response);
+    rpc SyncNALinkStateV1(Takasho.Schema.LettuceServer.PlayerApi.ActionSyncNALinkStateV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ActionSyncNALinkStateV1.Response);
+}
+service Mission {
+    rpc CompleteV1(Takasho.Schema.LettuceServer.PlayerApi.MissionCompleteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MissionCompleteV1.Response);
+    rpc CompleteV2(Takasho.Schema.LettuceServer.PlayerApi.MissionCompleteV2.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MissionCompleteV2.Response);
+    rpc IsCompletedV1(Takasho.Schema.LettuceServer.PlayerApi.MissionIsCompletedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MissionIsCompletedV1.Response);
+    rpc IsNotifiedV1(Takasho.Schema.LettuceServer.PlayerApi.MissionIsNotifiedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MissionIsNotifiedV1.Response);
+    rpc SetNotifiedV1(Takasho.Schema.LettuceServer.PlayerApi.MissionSetNotifiedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MissionSetNotifiedV1.Response);
+    rpc GetGroupRewardStepStatesV1(Takasho.Schema.LettuceServer.PlayerApi.MissionGetGroupRewardStepStatesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MissionGetGroupRewardStepStatesV1.Response);
+    rpc CompleteGroupRewardStepV1(Takasho.Schema.LettuceServer.PlayerApi.MissionCompleteGroupRewardStepV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MissionCompleteGroupRewardStepV1.Response);
+}
+service Mount {
+    rpc ListV1(Takasho.Schema.LettuceServer.PlayerApi.MountListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MountListV1.Response);
+    rpc ChangeOrderV1(Takasho.Schema.LettuceServer.PlayerApi.MountChangeOrderV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MountChangeOrderV1.Response);
+    rpc GetDetailV1(Takasho.Schema.LettuceServer.PlayerApi.MountGetDetailV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MountGetDetailV1.Response);
+    rpc GetOtherDetailV1(Takasho.Schema.LettuceServer.PlayerApi.MountGetOtherDetailV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MountGetOtherDetailV1.Response);
+    rpc SetV1(Takasho.Schema.LettuceServer.PlayerApi.MountSetV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MountSetV1.Response);
+    rpc DeleteV1(Takasho.Schema.LettuceServer.PlayerApi.MountDeleteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MountDeleteV1.Response);
+}
+service Webview {
+    rpc GetNewsV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetNewsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetNewsV1.Response);
+    rpc GetNewsDetailUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetNewsDetailUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetNewsDetailUrlV1.Response);
+    rpc GetGameHintUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetGameHintUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetGameHintUrlV1.Response);
+    rpc GetAboutUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetAboutUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetAboutUrlV1.Response);
+    rpc GetTermsOfServiceUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetTermsOfServiceUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetTermsOfServiceUrlV1.Response);
+    rpc GetPrivacyPolicyUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetPrivacyPolicyUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetPrivacyPolicyUrlV1.Response);
+    rpc GetPaymentServiceActUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetPaymentServiceActUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetPaymentServiceActUrlV1.Response);
+    rpc GetSpecifiedCommercialTransactionLawUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetSpecifiedCommercialTransactionLawUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetSpecifiedCommercialTransactionLawUrlV1.Response);
+    rpc GetECommerceLawUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetECommerceLawUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetECommerceLawUrlV1.Response);
+    rpc GetHowToUpdateUrlV1(Takasho.Schema.LettuceServer.PlayerApi.WebviewGetHowToUpdateUrlV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.WebviewGetHowToUpdateUrlV1.Response);
+}
+service Notification {
+    rpc GetSettingsV1(Takasho.Schema.LettuceServer.PlayerApi.NotificationGetSettingsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.NotificationGetSettingsV1.Response);
+    rpc SaveSettingsV1(Takasho.Schema.LettuceServer.PlayerApi.NotificationSaveSettingsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.NotificationSaveSettingsV1.Response);
+}
+service Pack {
+    rpc GetDetailV1(Takasho.Schema.LettuceServer.PlayerApi.PackGetDetailV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PackGetDetailV1.Response);
+    rpc GetPackPowerV1(Takasho.Schema.LettuceServer.PlayerApi.PackGetPackPowerV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PackGetPackPowerV1.Response);
+    rpc GetDetailV2(Takasho.Schema.LettuceServer.PlayerApi.PackGetDetailV2.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PackGetDetailV2.Response);
+}
+service PackShop {
+    rpc PurchaseV1(Takasho.Schema.LettuceServer.PlayerApi.PackShopPurchaseV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PackShopPurchaseV1.Response);
+    rpc PurchaseV2(Takasho.Schema.LettuceServer.PlayerApi.PackShopPurchaseV2.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PackShopPurchaseV2.Response);
+    rpc ExchangeV1(Takasho.Schema.LettuceServer.PlayerApi.PackShopExchangeV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PackShopExchangeV1.Response);
+}
+service Pass {
+    rpc GetEntitlementsV1(Takasho.Schema.LettuceServer.PlayerApi.PassGetEntitlementsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PassGetEntitlementsV1.Response);
+}
+service Player {
+    rpc DeleteAccountV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerDeleteAccountV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerDeleteAccountV1.Response);
+    rpc UnlinkAccountV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerUnlinkAccountV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerUnlinkAccountV1.Response);
+}
+service PlayerLevel {
+    rpc MayLevelUpV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerLevelMayLevelUpV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerLevelMayLevelUpV1.Response);
+}
+service PlayerProfile {
+    rpc MyProfileV1(Takasho.Schema.LettuceServer.PlayerApi.MyProfileV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.MyProfileV1.Response);
+    rpc OtherPlayerProfileV1(Takasho.Schema.LettuceServer.PlayerApi.OtherPlayerProfileV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.OtherPlayerProfileV1.Response);
+    rpc SaveMyProfileV1(Takasho.Schema.LettuceServer.PlayerApi.SaveMyProfileV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SaveMyProfileV1.Response);
+}
+service PlayerResources {
+    rpc SyncV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerResourcesSyncV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerResourcesSyncV1.Response);
+    rpc GetNewEmblemArrivalV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerResourcesGetNewEmblemArrivalV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerResourcesGetNewEmblemArrivalV1.Response);
+    rpc MarkAsViewedNewEmblemArrivalV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerResourcesMarkAsViewedNewEmblemArrivalV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerResourcesMarkAsViewedNewEmblemArrivalV1.Response);
+}
+service PlayerSettings {
+    rpc GetInfoV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerSettingGetInfoV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerSettingGetInfoV1.Response);
+    rpc SaveInfoV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerSettingSaveInfoV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerSettingSaveInfoV1.Response);
+}
+service PlayerStorage {
+    rpc SetEntriesV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerStorageSetEntriesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerStorageSetEntriesV1.Response);
+    rpc GetEntriesV1(Takasho.Schema.LettuceServer.PlayerApi.PlayerStorageGetEntriesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PlayerStorageGetEntriesV1.Response);
+}
+service PresentBox {
+    rpc ListV1(Takasho.Schema.LettuceServer.PlayerApi.PresentBoxListV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PresentBoxListV1.Response);
+    rpc ListHistoriesV1(Takasho.Schema.LettuceServer.PlayerApi.PresentBoxListHistoriesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PresentBoxListHistoriesV1.Response);
+    rpc ReceiveV1(Takasho.Schema.LettuceServer.PlayerApi.PresentBoxReceiveV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PresentBoxReceiveV1.Response);
+    rpc GetNewArrivalV1(Takasho.Schema.LettuceServer.PlayerApi.PresentBoxGetNewArrivalV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PresentBoxGetNewArrivalV1.Response);
+    rpc MarkAsViewedV1(Takasho.Schema.LettuceServer.PlayerApi.PresentBoxMarkAsViewedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PresentBoxMarkAsViewedV1.Response);
+}
+service PvpCasual {
+    rpc RequestPublicMatchingV1(Takasho.Schema.LettuceServer.PlayerApi.PvpCasualRequestPublicMatchingV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpCasualRequestPublicMatchingV1.Response);
+    rpc RequestPrivateMatchingV1(Takasho.Schema.LettuceServer.PlayerApi.PvpCasualRequestPrivateMatchingV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpCasualRequestPrivateMatchingV1.Response);
+    rpc DeleteMatchingV1(Takasho.Schema.LettuceServer.PlayerApi.PvpCasualDeleteMatchingV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpCasualDeleteMatchingV1.Response);
+    rpc GetMatchingResultV1(Takasho.Schema.LettuceServer.PlayerApi.PvpCasualGetMatchingResultV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpCasualGetMatchingResultV1.Response);
+    rpc StartBattleV1(Takasho.Schema.LettuceServer.PlayerApi.PvpCasualStartBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpCasualStartBattleV1.Response);
+    rpc FinishBattleV1(Takasho.Schema.LettuceServer.PlayerApi.PvpCasualFinishBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpCasualFinishBattleV1.Response);
+}
+service PvpEvent {
+    rpc RequestEmblemMatchingV1(Takasho.Schema.LettuceServer.PlayerApi.PvpEventRequestEmblemMatchingV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpEventRequestEmblemMatchingV1.Response);
+    rpc DeleteMatchingV1(Takasho.Schema.LettuceServer.PlayerApi.PvpEventDeleteMatchingV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpEventDeleteMatchingV1.Response);
+    rpc GetMatchingResultV1(Takasho.Schema.LettuceServer.PlayerApi.PvpEventGetMatchingResultV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpEventGetMatchingResultV1.Response);
+    rpc StartBattleV1(Takasho.Schema.LettuceServer.PlayerApi.PvpEventStartBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpEventStartBattleV1.Response);
+    rpc FinishBattleV1(Takasho.Schema.LettuceServer.PlayerApi.PvpEventFinishBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpEventFinishBattleV1.Response);
+    rpc GetEmblemProfileV1(Takasho.Schema.LettuceServer.PlayerApi.PvpEventGetEmblemProfileV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.PvpEventGetEmblemProfileV1.Response);
+}
+service Shop {
+    rpc GetNewArrivalV1(Takasho.Schema.LettuceServer.PlayerApi.ShopGetNewArrivalV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ShopGetNewArrivalV1.Response);
+    rpc GetNewNotificationV1(Takasho.Schema.LettuceServer.PlayerApi.ShopGetNewNotificationV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ShopGetNewNotificationV1.Response);
+    rpc MarkAsViewedV1(Takasho.Schema.LettuceServer.PlayerApi.ShopMarkAsViewedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ShopMarkAsViewedV1.Response);
+}
+service SignInWithApple {
+    rpc GenerateTokenV1(Takasho.Schema.LettuceServer.PlayerApi.SignInWithAppleGenerateTokenV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SignInWithAppleGenerateTokenV1.Response);
+}
+service SoloBattle {
+    rpc GetStepupBattlesV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleGetStepupBattlesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleGetStepupBattlesV1.Response);
+    rpc StartStepupBattleV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleStartStepupBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleStartStepupBattleV1.Response);
+    rpc FinishStepupBattleV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleFinishStepupBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleFinishStepupBattleV1.Response);
+    rpc GetEventBattlesV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleGetEventBattlesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleGetEventBattlesV1.Response);
+    rpc StartEventBattleV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleStartEventBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleStartEventBattleV1.Response);
+    rpc FinishEventBattleV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleFinishEventBattleV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleFinishEventBattleV1.Response);
+    rpc HealEventPowerV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleHealEventPowerV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleHealEventPowerV1.Response);
+    rpc GetEventPowersV1(Takasho.Schema.LettuceServer.PlayerApi.SoloBattleGetEventPowersV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SoloBattleGetEventPowersV1.Response);
+}
+service System {
+    rpc AuthorizeV1(Takasho.Schema.LettuceServer.PlayerApi.SystemAuthorizeV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SystemAuthorizeV1.Response);
+    rpc LoginV1(Takasho.Schema.LettuceServer.PlayerApi.SystemLoginV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.SystemLoginV1.Response);
+}
+service ThankReward {
+    rpc SendV1(Takasho.Schema.LettuceServer.PlayerApi.ThankRewardSendV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.ThankRewardSendV1.Response);
+}
+service Trade {
+    rpc GetV1(Takasho.Schema.LettuceServer.PlayerApi.TradeGetV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeGetV1.Response);
+    rpc SubmitProposalV1(Takasho.Schema.LettuceServer.PlayerApi.TradeSubmitProposalV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeSubmitProposalV1.Response);
+    rpc AcceptProposalV1(Takasho.Schema.LettuceServer.PlayerApi.TradeAcceptProposalV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeAcceptProposalV1.Response);
+    rpc ConfirmV1(Takasho.Schema.LettuceServer.PlayerApi.TradeConfirmV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeConfirmV1.Response);
+    rpc RejectV1(Takasho.Schema.LettuceServer.PlayerApi.TradeRejectV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeRejectV1.Response);
+    rpc ReceiveOutcomesV1(Takasho.Schema.LettuceServer.PlayerApi.TradeReceiveOutcomesV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeReceiveOutcomesV1.Response);
+    rpc ReceiveDepositsV1(Takasho.Schema.LettuceServer.PlayerApi.TradeReceiveDepositsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeReceiveDepositsV1.Response);
+    rpc GetFriendsV1(Takasho.Schema.LettuceServer.PlayerApi.TradeGetFriendsV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeGetFriendsV1.Response);
+    rpc GetSettingV1(Takasho.Schema.LettuceServer.PlayerApi.TradeGetSettingV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeGetSettingV1.Response);
+    rpc SaveSettingV1(Takasho.Schema.LettuceServer.PlayerApi.TradeSaveSettingV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeSaveSettingV1.Response);
+    rpc GetHistoryV1(Takasho.Schema.LettuceServer.PlayerApi.TradeGetHistoryV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeGetHistoryV1.Response);
+    rpc GetTradePowerV1(Takasho.Schema.LettuceServer.PlayerApi.TradeGetTradePowerV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeGetTradePowerV1.Response);
+    rpc HealTradePowerV1(Takasho.Schema.LettuceServer.PlayerApi.TradeHealTradePowerV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TradeHealTradePowerV1.Response);
+}
+service Trophy {
+    rpc CompleteV1(Takasho.Schema.LettuceServer.PlayerApi.TrophyCompleteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TrophyCompleteV1.Response);
+    rpc GetStatusV1(Takasho.Schema.LettuceServer.PlayerApi.TrophyGetStatusV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TrophyGetStatusV1.Response);
+}
+service Tutorial {
+    rpc CompleteV1(Takasho.Schema.LettuceServer.PlayerApi.TutorialCompleteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TutorialCompleteV1.Response);
+    rpc ChoiceExchangeRouteV1(Takasho.Schema.LettuceServer.PlayerApi.TutorialChoiceExchangeRouteV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TutorialChoiceExchangeRouteV1.Response);
+    rpc PackPurchaseV1(Takasho.Schema.LettuceServer.PlayerApi.TutorialPackPurchaseV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TutorialPackPurchaseV1.Response);
+    rpc GetFeedTimelineV1(Takasho.Schema.LettuceServer.PlayerApi.TutorialGetFeedTimelineV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TutorialGetFeedTimelineV1.Response);
+    rpc ChallengeFeedV1(Takasho.Schema.LettuceServer.PlayerApi.TutorialChallengeFeedV1.Request) returns (Takasho.Schema.LettuceServer.PlayerApi.TutorialChallengeFeedV1.Response);
+}

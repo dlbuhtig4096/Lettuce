@@ -1,0 +1,117 @@
+
+/*
+ * Project:     Lettuce
+ * Author:      dlbuhtig4096@github
+ * Version:     2025-01-31
+ */
+                       
+syntax = "proto3";
+import "Lettuce.proto";
+
+service AssetService {
+    rpc GetSignedCookie(Takasho.Schema.LettuceDebugServer.Debug.AssetServiceGetSignedCookie.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.AssetServiceGetSignedCookie.Response);
+    rpc GetVersions(Takasho.Schema.LettuceDebugServer.Debug.AssetServiceGetVersions.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.AssetServiceGetVersions.Response);
+}
+service DebugStorage {
+    rpc SetEntriesV1(Takasho.Schema.LettuceDebugServer.Debug.DebugStorageSetEntriesV1.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.DebugStorageSetEntriesV1.Response);
+    rpc GetEntriesV1(Takasho.Schema.LettuceDebugServer.Debug.DebugStorageGetEntriesV1.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.DebugStorageGetEntriesV1.Response);
+}
+service GMToolLog {
+    rpc Emit(Takasho.Schema.LettuceDebugServer.Debug.GMToolLogEmit.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.GMToolLogEmit.Response);
+}
+service Player {
+    rpc Create(Takasho.Schema.LettuceDebugServer.Debug.PlayerCreate.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerCreate.Response);
+    rpc Delete(Takasho.Schema.LettuceDebugServer.Debug.PlayerDelete.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerDelete.Response);
+    rpc SetLastLoggedIn(Takasho.Schema.LettuceDebugServer.Debug.PlayerSetLastLoggedIn.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerSetLastLoggedIn.Response);
+    rpc GetLastLoggedIn(Takasho.Schema.LettuceDebugServer.Debug.PlayerGetLastLoggedIn.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerGetLastLoggedIn.Response);
+    rpc SetAvailable(Takasho.Schema.LettuceDebugServer.Debug.PlayerSetAvailable.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerSetAvailable.Response);
+    rpc SetBaasUserDebugSetting(Takasho.Schema.LettuceDebugServer.Debug.PlayerSetBaasUserDebugSetting.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerSetBaasUserDebugSetting.Response);
+    rpc DeleteBaasUserDebugSetting(Takasho.Schema.LettuceDebugServer.Debug.PlayerDeleteBaasUserDebugSetting.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerDeleteBaasUserDebugSetting.Response);
+    rpc SetPlayerSetting(Takasho.Schema.LettuceDebugServer.Debug.PlayerSetPlayerSetting.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerSetPlayerSetting.Response);
+    rpc SetPlayerAdjustmentTimestamp(Takasho.Schema.LettuceDebugServer.Debug.PlayerAdjustmentTimestamp.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerAdjustmentTimestamp.Response);
+    rpc SetPlayerAdjustmentRelativeTimestamp(Takasho.Schema.LettuceDebugServer.Debug.PlayerAdjustmentRelativeTimestamp.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PlayerAdjustmentRelativeTimestamp.Response);
+}
+service CardStock {
+    rpc Get(Takasho.Schema.LettuceDebugServer.Debug.CardStockGet.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.CardStockGet.Response);
+    rpc Add(Takasho.Schema.LettuceDebugServer.Debug.CardStockAdd.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.CardStockAdd.Response);
+    rpc Put(Takasho.Schema.LettuceDebugServer.Debug.CardStockPut.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.CardStockPut.Response);
+    rpc Delete(Takasho.Schema.LettuceDebugServer.Debug.CardStockDelete.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.CardStockDelete.Response);
+}
+service Feed {
+    rpc EnableTimelineRenewal(Takasho.Schema.LettuceDebugServer.Debug.FeedEnableTimelineRenewal.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FeedEnableTimelineRenewal.Response);
+    rpc AddPower(Takasho.Schema.LettuceDebugServer.Debug.FeedAddPower.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FeedAddPower.Response);
+    rpc DeleteSharedPacks(Takasho.Schema.LettuceDebugServer.Debug.FeedDeleteSharedPacks.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FeedDeleteSharedPacks.Response);
+    rpc RenewTimelineWithOptions(Takasho.Schema.LettuceDebugServer.Debug.FeedRenewTimelineWithOptions.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FeedRenewTimelineWithOptions.Response);
+    rpc ChallengeWithOptions(Takasho.Schema.LettuceDebugServer.Debug.FeedChallengeWithOptions.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FeedChallengeWithOptions.Response);
+}
+service PackPower {
+    rpc Add(Takasho.Schema.LettuceDebugServer.Debug.PackPowerAdd.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PackPowerAdd.Response);
+}
+service Mission {
+    rpc AddAction(Takasho.Schema.LettuceDebugServer.Debug.MissionAddAction.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.MissionAddAction.Response);
+    rpc UndoClear(Takasho.Schema.LettuceDebugServer.Debug.MissionUndoClear.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.MissionUndoClear.Response);
+}
+service Friend {
+    rpc Add(Takasho.Schema.LettuceDebugServer.Debug.FriendAdd.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FriendAdd.Response);
+    rpc AddExisting(Takasho.Schema.LettuceDebugServer.Debug.FriendAddExisting.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FriendAddExisting.Response);
+    rpc SendRequests(Takasho.Schema.LettuceDebugServer.Debug.FriendSendRequests.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FriendSendRequests.Response);
+    rpc ApproveRequests(Takasho.Schema.LettuceDebugServer.Debug.FriendApproveRequests.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FriendApproveRequests.Response);
+    rpc CancelRequests(Takasho.Schema.LettuceDebugServer.Debug.FriendCancelRequests.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FriendCancelRequests.Response);
+    rpc RejectRequests(Takasho.Schema.LettuceDebugServer.Debug.FriendRejectRequests.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.FriendRejectRequests.Response);
+}
+service ItemShop {
+    rpc AddPurchaseSummaries(Takasho.Schema.LettuceDebugServer.Debug.ItemShopAddPurchaseSummaries.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.ItemShopAddPurchaseSummaries.Response);
+    rpc DeletePurchaseSummaries(Takasho.Schema.LettuceDebugServer.Debug.ItemShopDeletePurchaseSummaries.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.ItemShopDeletePurchaseSummaries.Response);
+}
+service Item {
+    rpc Add(Takasho.Schema.LettuceDebugServer.Debug.ItemAdd.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.ItemAdd.Response);
+    rpc AddToPlayers(Takasho.Schema.LettuceDebugServer.Debug.ItemAddToPlayers.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.ItemAddToPlayers.Response);
+}
+service PokeGoldShop {
+    rpc AddPurchaseSummaries(Takasho.Schema.LettuceDebugServer.Debug.PokeGoldShopAddPurchaseSummaries.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PokeGoldShopAddPurchaseSummaries.Response);
+    rpc DeletePurchaseSummaries(Takasho.Schema.LettuceDebugServer.Debug.PokeGoldShopDeletePurchaseSummaries.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PokeGoldShopDeletePurchaseSummaries.Response);
+}
+service CardExchange {
+    rpc SetRouteTypeV1(Takasho.Schema.LettuceDebugServer.Debug.CardExchangeSetRouteTypeV1.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.CardExchangeSetRouteTypeV1.Response);
+}
+service Trophy {
+    rpc Set(Takasho.Schema.LettuceDebugServer.Debug.TrophySet.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.TrophySet.Response);
+}
+service MyCollection {
+    rpc AddCollection(Takasho.Schema.LettuceDebugServer.Debug.MyCollectionAddCollection.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.MyCollectionAddCollection.Response);
+    rpc SetLikeCount(Takasho.Schema.LettuceDebugServer.Debug.MyCollectionSetLikeCount.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.MyCollectionSetLikeCount.Response);
+}
+service Profile {
+    rpc SetProfiles(Takasho.Schema.LettuceDebugServer.Debug.ProfileSetProfiles.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.ProfileSetProfiles.Response);
+    rpc ResetNicknameChangedAt(Takasho.Schema.LettuceDebugServer.Debug.ProfileResetNicknameChangedAt.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.ProfileResetNicknameChangedAt.Response);
+}
+service Present {
+    rpc Create(Takasho.Schema.LettuceDebugServer.Debug.PresentCreate.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PresentCreate.Response);
+}
+service SoloBattle {
+    rpc AddEventPower(Takasho.Schema.LettuceDebugServer.Debug.SoloBattleAddEventPower.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.SoloBattleAddEventPower.Response);
+}
+service Webview {
+    rpc SetLastViewed(Takasho.Schema.LettuceDebugServer.Debug.WebviewSetLastViewed.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.WebviewSetLastViewed.Response);
+}
+service Tutorial {
+    rpc SetTutorialStep(Takasho.Schema.LettuceDebugServer.Debug.TutorialSetTutorialStep.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.TutorialSetTutorialStep.Response);
+}
+service PvpCasual {
+    rpc SetProfiles(Takasho.Schema.LettuceDebugServer.Debug.PvpCasualSetProfiles.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PvpCasualSetProfiles.Response);
+    rpc SetProfileUpdateMode(Takasho.Schema.LettuceDebugServer.Debug.PvpCasualSetProfileUpdateMode.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PvpCasualSetProfileUpdateMode.Response);
+    rpc GetProfile(Takasho.Schema.LettuceDebugServer.Debug.PvpCasualGetProfile.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PvpCasualGetProfile.Response);
+}
+service PvpEvent {
+    rpc SetProfiles(Takasho.Schema.LettuceDebugServer.Debug.PvpEventSetProfiles.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PvpEventSetProfiles.Response);
+}
+service Pass {
+    rpc PurchaseMock(Takasho.Schema.LettuceDebugServer.Debug.PassPurchaseMock.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PassPurchaseMock.Response);
+    rpc UnlinkMarket(Takasho.Schema.LettuceDebugServer.Debug.PassUnlinkMarket.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PassUnlinkMarket.Response);
+    rpc DetectFreeTrialViolation(Takasho.Schema.LettuceDebugServer.Debug.PassDetectFreeTrialViolation.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PassDetectFreeTrialViolation.Response);
+    rpc ResetFreeTrialViolation(Takasho.Schema.LettuceDebugServer.Debug.PassResetFreeTrialViolation.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.PassResetFreeTrialViolation.Response);
+}
+service Trade {
+    rpc SetPower(Takasho.Schema.LettuceDebugServer.Debug.TradeSetPower.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.TradeSetPower.Response);
+    rpc CreateTradeHistories(Takasho.Schema.LettuceDebugServer.Debug.TradeCreateTradeHistories.Request) returns (Takasho.Schema.LettuceDebugServer.Debug.TradeCreateTradeHistories.Response);
+}
